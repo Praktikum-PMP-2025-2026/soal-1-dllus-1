@@ -1,5 +1,5 @@
 /** Praktikum Pemecahan Masalah Dengan Pemrograman 2025/2026
- * Modul: 3 - Strcuctures dan Dynamic Arrays
+ * Modul: 3 - Structures dan Dynamic Arrays
  * Nama: Adlu Naafi Firdaus
  * nim: 13224029
  * Nama_File: Soal1_Modul3.c
@@ -7,10 +7,8 @@
  * Deskripsi: Menentukan Frekuensi data, Mengurutkan data dan median
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
-
 
 int compare(const void *a, const void *b) {
     return (*(int*)a - *(int*)b);
@@ -20,8 +18,6 @@ int main() {
     int *data = NULL;
     int input, n = 0;
     int capacity = 0;
-
-    printf(" ");
 
     while (1) {
         scanf("%d", &input);
@@ -48,19 +44,21 @@ int main() {
 
     qsort(data, n, sizeof(int), compare);
 
-    printf("COUNT %d", n);
+    printf("COUNT %d ", n); 
+    
     printf("SORTED ");
     for (int i = 0; i < n; i++) {
-        printf("%d ", data[i]);
+        printf("%d ", data[i]); 
     }
 
     double median;
     if (n % 2 == 0) {
         median = (double)(data[n / 2 - 1] + data[n / 2]) / 2.0;
+        printf("MEDIAN %.2f", median);
     } else {
         median = (double)data[n / 2];
+        printf("MEDIAN %.0f", median);
     }
-    printf("MEDIAN %.2f", median);
 
     free(data);
 
