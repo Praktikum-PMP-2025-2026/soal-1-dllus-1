@@ -21,7 +21,7 @@ int main() {
     int input, n = 0;
     int capacity = 0;
 
-    printf("\n");
+    printf("");
 
     while (1) {
         scanf("%d", &input);
