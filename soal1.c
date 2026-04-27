@@ -48,12 +48,12 @@ int main() {
 
     qsort(data, n, sizeof(int), compare);
 
-    printf("\nUrutan yang Benar: ");
+    printf("\nSORTED ");
     for (int i = 0; i < n; i++) {
         printf("%d ", data[i]);
     }
 
-    printf("\nTotal Data: %d\n", n);
+    printf("\nCOUNT %d\n", n);
 
     double median;
     if (n % 2 == 0) {
@@ -61,7 +61,7 @@ int main() {
     } else {
         median = (double)data[n / 2];
     }
-    printf("Median: %.2f\n", median);
+    printf("MEDIAN %.2f\n", median);
 
     free(data);
 
