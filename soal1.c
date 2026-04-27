@@ -31,7 +31,7 @@ int main() {
             capacity = (capacity == 0) ? 1 : capacity * 2;
             int *temp = realloc(data, capacity * sizeof(int));
             if (temp == NULL) {
-                printf("Memory allocation failed!\n");
+                printf("Memory allocation failed!");
                 free(data);
                 return 1;
             }
@@ -42,13 +42,13 @@ int main() {
     }
 
     if (n == 0) {
-        printf("Tidak ada data yang dimasukkan.\n");
+        printf("Tidak ada data yang dimasukkan.");
         return 0;
     }
 
     qsort(data, n, sizeof(int), compare);
 
-    printf("\nCOUNT %d\n", n);
+    printf("COUNT %d", n);
     printf("SORTED ");
     for (int i = 0; i < n; i++) {
         printf("%d ", data[i]);
@@ -60,7 +60,7 @@ int main() {
     } else {
         median = (double)data[n / 2];
     }
-    printf("\nMEDIAN %.2f\n", median);
+    printf("MEDIAN %.2f", median);
 
     free(data);
 
